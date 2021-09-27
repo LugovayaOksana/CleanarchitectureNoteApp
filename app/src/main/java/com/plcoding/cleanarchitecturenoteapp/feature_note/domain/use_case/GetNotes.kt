@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.map
 class GetNotes(
     private val repository: NoteRepository
 ) {
+
     operator fun invoke(
         noteOrder: NoteOrder = NoteOrder.Date(OrderType.Descending)
     ): Flow<List<Note>> {
@@ -32,5 +33,4 @@ class GetNotes(
             }
         }
     }
-
 }

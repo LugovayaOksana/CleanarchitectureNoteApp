@@ -29,7 +29,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideNoteRepository(db: NoteDatabase):NoteRepository {
+    fun provideNoteRepository(db: NoteDatabase): NoteRepository {
         return NoteRepositoryImpl(db.noteDao)
     }
 

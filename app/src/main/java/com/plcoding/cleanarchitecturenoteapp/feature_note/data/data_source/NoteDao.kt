@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 //DAO (Database Access Object)
 //Список функций с помощью которых получаем доступ к БД room
+
 @Dao
 interface NoteDao {
 

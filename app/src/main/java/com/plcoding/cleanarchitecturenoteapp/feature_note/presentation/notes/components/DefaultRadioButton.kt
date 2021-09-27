@@ -19,7 +19,7 @@ fun DefaultRadioButton(
     selected: Boolean,
     onSelect: () -> Unit,
     modifier: Modifier = Modifier
-){
+) {
     Row(
         modifier = modifier,
         verticalAlignment = Alignment.CenterVertically
@@ -29,11 +29,10 @@ fun DefaultRadioButton(
             onClick = onSelect,
             colors = RadioButtonDefaults.colors(
                 selectedColor = MaterialTheme.colors.primary,
-                unselectedColor = MaterialTheme.colors.onBackground,
+                unselectedColor = MaterialTheme.colors.onBackground
             )
         )
         Spacer(modifier = Modifier.width(8.dp))
         Text(text = text, style = MaterialTheme.typography.body1)
     }
-
 }
