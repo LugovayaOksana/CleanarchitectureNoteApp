@@ -2,7 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.plcoding.cleanarchitecturenoteapp">
 
+<!--    Data-слой: Отправляет необходимые для приложения данные в domain-слой,
+реализуя предоставляемый domain интерфейс.
+Domain-слой: запускает независимую от других уровней бизнес-логику.
+Представляет собой чистый пакет kotlin без android-зависимостей.
+
+Репозиторий напрямую обращается к нашим источникам данных
+и его задача состоит в том, чтоб принимать эти источники данных из нескольких источников данных
+и определять какой из них пересылать в с соответствующие варианты использования (use_case)
+
+use_case не должен знать откуда репозиторий получает данные, ему нужны только данные.
+use_case n содержит бизнес логику.
+-->
+
     <application
+        android:name=".NoteApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
